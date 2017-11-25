@@ -1,4 +1,8 @@
 <?php
+/*
+* Coded by Dandy Raka ( https://github.com/dandyraka/ThreeBomb )
+* Three SMS Bomber ( Updated 26-11-2017 )
+*/
 function threebomb($no, $jum, $wait = 0){
     $x = 1;
     $result = "";
@@ -28,6 +32,21 @@ function threebomb($no, $jum, $wait = 0){
     }
 	return($result);
 }
-$execute = threebomb('628xxxxxxxxxxx', '2');
-print $execute;
+
+if (!empty($_GET['nomor']) AND !empty($_GET['jumlah'])){
+	$number = $_GET['nomor'];
+	$jumSMS = $_GET['jumlah'];
+	if (!empty($_GET['delay'])){
+		$delay = $_GET['delay'];
+		$execute = threebomb($number, $jumSMS, $delay);
+		print $execute;
+	} else {
+		$execute = threebomb($number, $jumSMS);
+		print $execute;
+	}
+} else {
+	echo "Salah boss ...";
+	echo "Contohnya : run.php?nomor=6289xxxx&jumlah=10 atau run.php?nomor=6289xxxx&jumlah=10&delay=2";
+}
+
 ?>
