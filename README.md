@@ -7,14 +7,14 @@ Usage
 
 fill phone number & count of sms to run.php
 ```
-$execute = threebomb('YOUR_PHONE_NUMBER', 'COUNT_OF_SMS');
+run.php?nomor=6289xxxx&jumlah=10
 ```
 
 - use delay
 
 fill phone number, count of sms, delay (in seconds) to run.php
 ```
-$execute = threebomb('YOUR_PHONE_NUMBER', 'COUNT_OF_SMS', 'DELAY');
+run.php?nomor=6289xxxx&jumlah=10&delay=2
 ```
 
 Note
