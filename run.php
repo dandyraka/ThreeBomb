@@ -28,6 +28,6 @@ function threebomb($no, $jum, $wait = 0){
     }
 	return($result);
 }
-$execute = threebomb('628xxxxxxxxxxx', '2');
+$execute = threebomb('123xxxxxxxxxxx', '2');
 print $execute;
 ?>
